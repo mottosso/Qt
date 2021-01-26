@@ -549,16 +549,16 @@ With Docker setup, here's what you do. Please note this will pull down a ~1 GB i
 cd Qt.py
 
 # Run nosetests (Linux/OSX)
-docker run --rm -v $(pwd):/Qt.py -e PYTHON=2.7 fredrikaverpil/qt.py:2018
-docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.4 fredrikaverpil/qt.py:2018
-docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.5 fredrikaverpil/qt.py:2018
-docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.6 fredrikaverpil/qt.py:2018
+docker run --rm -v $(pwd):/Qt.py -e PYTHON=2.7 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.4 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.5 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v $(pwd):/Qt.py -e PYTHON=3.6 fredrikaverpil/qt.py:2018-update1
 
 # Run nosetests (Windows)
-docker run --rm -v %CD%:/Qt.py -e PYTHON=2.7 fredrikaverpil/qt.py:2018
-docker run --rm -v %CD%:/Qt.py -e PYTHON=3.4 fredrikaverpil/qt.py:2018
-docker run --rm -v %CD%:/Qt.py -e PYTHON=3.5 fredrikaverpil/qt.py:2018
-docker run --rm -v %CD%:/Qt.py -e PYTHON=3.6 fredrikaverpil/qt.py:2018
+docker run --rm -v %CD%:/Qt.py -e PYTHON=2.7 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v %CD%:/Qt.py -e PYTHON=3.4 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v %CD%:/Qt.py -e PYTHON=3.5 fredrikaverpil/qt.py:2018-update1
+docker run --rm -v %CD%:/Qt.py -e PYTHON=3.6 fredrikaverpil/qt.py:2018-update1
 
 # Doctest: test_caveats.test_1_qtgui_qabstractitemmodel_createindex ... ok
 # Doctest: test_caveats.test_2_qtgui_qabstractitemmodel_createindex ... ok

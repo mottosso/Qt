@@ -1,6 +1,24 @@
 matrix:
   include:
 
+  # VFX Platform 2018-update1
+  - os: linux
+    env:
+    - VFXPLATFORM=2018-update1
+    - PYTHON=2.7
+  - os: linux
+    env:
+    - VFXPLATFORM=2018-update1
+    - PYTHON=3.4
+  - os: linux
+    env:
+    - VFXPLATFORM=2018-update1
+    - PYTHON=3.5
+  - os: linux
+    env:
+    - VFXPLATFORM=2018-update1
+    - PYTHON=3.6
+
   # VFX Platform 2018
   - os: linux
     env:
