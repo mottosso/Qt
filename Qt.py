@@ -371,6 +371,8 @@ _common_members = {
         "QSvgGenerator",
         "QSvgRenderer"
     ],
+    "QtSvgWidgets": [
+    ],
     "QtTest": [
         "QTest"
     ],
@@ -963,6 +965,7 @@ _misplaced_members = {
             "QtCompat.qInstallMessageHandler", _qInstallMessageHandler
         ],
         "QtWidgets.QStyleOptionViewItem": "QtCompat.QStyleOptionViewItemV4",
+        "QtSvgWidgets.QSvgWidget": "QtSvgWidgets.QSvgWidget",
     },
     "PySide2": {        
         "QtWidgets.QUndoCommand": "QtWidgets.QUndoCommand",
@@ -1000,6 +1003,7 @@ _misplaced_members = {
             "QtCompat.qInstallMessageHandler", _qInstallMessageHandler
         ],
         "QtWidgets.QStyleOptionViewItem": "QtCompat.QStyleOptionViewItemV4",
+        "QtSvg.QSvgWidget": "QtSvgWidgets.QSvgWidget",
     },
     "PyQt5": {
         "QtWidgets.QUndoCommand": "QtWidgets.QUndoCommand",
@@ -1033,6 +1037,7 @@ _misplaced_members = {
         ],
         "QtWidgets.QShortcut": "QtWidgets.QShortcut",
         "QtWidgets.QStyleOptionViewItem": "QtCompat.QStyleOptionViewItemV4",
+        "QtSvg.QSvgWidget": "QtSvgWidgets.QSvgWidget",
     },
     "PySide": {
         "QtGui.QUndoCommand": "QtWidgets.QUndoCommand",
@@ -1074,6 +1079,7 @@ _misplaced_members = {
             "QtCompat.qInstallMessageHandler", _qInstallMessageHandler
         ],
         "QtGui.QStyleOptionViewItemV4": "QtCompat.QStyleOptionViewItemV4",
+        "QtSvg.QSvgWidget": "QtSvgWidgets.QSvgWidget",
     },
     "PyQt4": {
         "QtGui.QUndoCommand": "QtWidgets.QUndoCommand",
@@ -1116,6 +1122,7 @@ _misplaced_members = {
             "QtCompat.qInstallMessageHandler", _qInstallMessageHandler
         ],
         "QtGui.QStyleOptionViewItemV4": "QtCompat.QStyleOptionViewItemV4",
+        "QtSvg.QSvgWidget": "QtSvgWidgets.QSvgWidget",
     }
 }
 

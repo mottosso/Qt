@@ -7,7 +7,7 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Qt-py/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
-Qt.py enables you to write software that runs on any of the 4 supported bindings - PySide2, PyQt5, PySide and PyQt4.
+Qt.py enables you to write software that runs on any of the supported bindings - PySide, PySide2, PySide6, PyQt4 and PyQt5.
 
 <br>
 
@@ -609,6 +609,7 @@ python -m twine upload .\dist\*
 | `QtCore.Qt.MidButton`  | `QtCompat.Qt.MidButton`
 | `QLabel.setPixmap(str)` | `QLabel.setPixmap(QPixmap())` | Can't take a string anymore (tested in Maya 2025.0)
 | `QModelIndex.child` | `QModel.index` | This one is apparently from Qt 4 and should not have been in Qt.py to begin with
+| `QtSvg.QSvgWidget` | `QtSvgWidgets.QSvgWidget` | Moved to QtSvgWidgets in Qt 6
 | | Submit your known issues here! |
 
 ##### Removed Members
