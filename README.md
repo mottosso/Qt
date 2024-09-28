@@ -35,7 +35,7 @@ Qt.py enables you to write software that runs on any of the 4 supported bindings
 [1.2.1]: https://github.com/mottosso/Qt.py/releases/tag/1.2.1
 [1.3.0]: https://github.com/mottosso/Qt.py/releases/tag/1.3.0
 [1.3.9]: https://github.com/mottosso/Qt.py/releases/tag/1.3.9
-[1.4.0]: https://github.com/mottosso/Qt.py/releases/tag/1.4.1
+[1.4.1]: https://github.com/mottosso/Qt.py/releases/tag/1.4.1
 
 ##### Guides
 
