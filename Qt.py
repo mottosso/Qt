@@ -872,6 +872,19 @@ def _loadUi(uifile, baseinstance=None):
                 widget = Qt._QtUiTools.QUiLoader.load(
                     self, uifile, *args, **kwargs)
 
+                if self.baseinstance:
+                    # correct geometry on show
+                    parent = self.baseinstance.parentWidget()
+                    if parent and hasattr(parent, 'frameGeometry'):
+                        geo = self.baseinstance.geometry()
+                        pgeo = parent.geometry()
+                        pfgeo = parent.frameGeometry()
+                        hdiff = pfgeo.height() - pgeo.height()
+                        self.baseinstance.move(
+                            pgeo.x() + pgeo.width()/2 - geo.width()/2,
+                            pgeo.y() + pgeo.height()/2 - geo.height()/2 -
+                            hdiff)
+
                 # Workaround for PySide 1.0.9, see issue #208
                 widget.parentWidget()
 
