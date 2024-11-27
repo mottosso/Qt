@@ -1398,3 +1398,42 @@ if binding("PyQt4") or binding("PyQt5"):
         assert Qt.__binding__ == "PyQt4", (
             "PyQt4 should have been picked, "
             "instead got %s" % Qt.__binding__)
+
+    def test_pyqt_enums():
+        """Check some known enums/flags mappings."""
+        from Qt import QtCompat
+
+        class_attributes = {  # Version agnostic flags and enums
+            "CheckState": ["Checked", "Unchecked", "PartiallyChecked"],
+            "Orientation": ["Horizontal", "Vertical"],
+        }
+        for class_name, attributes in class_attributes.items():
+            qt_class = getattr(QtCompat, class_name)
+
+            values_path = "QtCompat.%s.%s" % (class_name, "values")
+            assert hasattr(qt_class, "values"), (
+                "%s should exist, but is missing" % values_path)
+
+            cls_values = getattr(qt_class, "values", None)
+            assert cls_values and isinstance(cls_values, dict), (
+                "%s should be a non-empty dictionary, not %s"
+                % (values_path, cls_values))
+
+            for attr_name in attributes:
+                attr_path = "QtCompat.%s.%s" % (class_name, attr_name)
+
+                assert hasattr(qt_class, attr_name), (
+                    "%s should exist, but is missing" % attr_path)
+
+                value = getattr(qt_class, attr_name, None)
+                assert value is not None, "%s shouldn't be None" % attr_path
+
+                assert attr_name in cls_values, (
+                    "%s key should exist in %s dict" %
+                    (attr_name, values_path))
+
+                cls_value = cls_values[attr_name]
+                assert value == cls_values[attr_name], (
+                    "(%s) %r != %r (%s[%s])" %
+                    (attr_path, value, cls_value, values_path, attr_name)
+                )
